@@ -1,0 +1,26 @@
+<launch>
+
+    <arg
+    	name = "enableRosBag" 
+        default = "false"
+    />
+
+    <!-- Launch the turtlebot world in gazebo-->
+    <include file = "$(find turtlebot_gazebo)/launch/turtlebot_world.launch"></include>
+
+    <node
+        pkg = "turtlebot_obstacle_avoidance"
+        type = "obstacle_avoidance"
+        name = "obstacle_avoidance"
+        output = "screen"
+        launch-prefix = "xterm -e"
+    />
+
+    <node
+	    pkg = "rosbag"
+	    type = "record"
+	    name = "record_obstacle_avoidance"
+	    args = "-x /camera/(.*) --duration=20 -a -O $(find turtlebot_obstacle_avoidance)/results/record_obstacle_avoidance.bag"
+	    if = "$(arg enableRosBag)"
+    />
+</launch>
