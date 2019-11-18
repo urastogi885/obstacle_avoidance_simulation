@@ -6,7 +6,9 @@
     />
 
     <!-- Launch the turtlebot world in gazebo-->
-    <include file = "$(find turtlebot_gazebo)/launch/turtlebot_world.launch"></include>
+    <include file = "$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
+        <arg name="world_file" value="$(find turtlebot_obstacle_avoidance)/worlds/turtlebot_enclosed_world.world"/>
+    </include>
 
     <node
         pkg = "turtlebot_obstacle_avoidance"
