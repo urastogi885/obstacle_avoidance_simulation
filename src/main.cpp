@@ -30,12 +30,12 @@
  * @brief Source file to run obstacle avoidance on a turtlebot
  */
 
-#include "obstacle_avoidance.h"
+#include "obstacle_avoidance/obstacle_avoidance.h"
 
 /**
  * @brief Starts the turtlebot
  * @param argc  Count of arguments
- * 		  argv  Pointer to arguments
+ * 		    argv  Pointer to arguments
  * @return nothing
  */
 int main(int argc, char* argv[]) {
@@ -43,7 +43,7 @@ int main(int argc, char* argv[]) {
   ros::init(argc, argv, "turtlebot_obstacle_avoidance");
   /// Create object for obstacle avoidance class
   ObstacleAvoidance obstacleAvoidance;
-  /// Start the bot to show obstacle avoidance behavior
+  /// Start the robot to show obstacle avoidance behavior
   obstacleAvoidance.startBot();
   return 0;
 }
