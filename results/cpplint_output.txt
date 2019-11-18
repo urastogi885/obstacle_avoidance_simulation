@@ -1,0 +1,4 @@
+./src/obstacle_avoidance.cpp:124:  Use operator && instead of and  [readability/alt_tokens] [2]
+Done processing ./src/obstacle_avoidance.cpp
+Done processing ./src/main.cpp
+Total errors found: 1
