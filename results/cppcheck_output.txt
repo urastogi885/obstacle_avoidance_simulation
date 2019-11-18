@@ -1,0 +1,6 @@
+Checking src/main.cpp...
+1/2 files checked 30% done
+Checking src/obstacle_avoidance.cpp...
+2/2 files checked 100% done
+[*]: (information) Unmatched suppression: missingIncludeSystem
+(information) Cppcheck cannot find all the include files (use --check-config for details)
