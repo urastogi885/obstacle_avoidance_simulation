@@ -91,6 +91,17 @@ using *Ctrl+C*)
 rosbag info record_obstacle_avoidance.bag
 ``` 
 
+## View Turlebot World
+
+- If you just want to look at the customized turtlebot world in Gazebo, make sure your roscore is running, and all other
+ROS nodes have been terminated.
+- Open a new terminal, switch to your ROS workspace, and run:
+```shell script
+cd <ROS Workspace>
+source devel/setup.bash
+rosrun gazebo_ros gazebo src/obstacle_avoidance_simulationturtlebot_enclosed_world.world
+```
+    
 ## Documents
 
 - These are located in the *results* sub-directory:
@@ -98,3 +109,4 @@ rosbag info record_obstacle_avoidance.bag
     - Cppcheck - *cppcheck_output.txt*
     - Rosbag - *record_obstacle_avoidance.bag*
     - RQT Graph Output - *rqt_graph.png*
+    - Turtlebot World - *customized_turtlebot_world.png*
