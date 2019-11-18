@@ -3,9 +3,7 @@
 
 ## Overview
 
-- ROS package to simulate obstacle avoidance behavior on a turtlebot.
-- Contains a beginner level tutorial as a ROS package to establish communication between 2 ROS nodes.
-- Uses tf frames, roslaunch, and rostest capabilities
+ROS package to simulate obstacle avoidance behavior on a turtlebot
 
 ## Dependencies
 
@@ -23,7 +21,7 @@
 - The full-version would help you install *Gazebo* as well. If you have ROS Kinetic pre-installed on your machine, use
   the following [*link*](http://gazebosim.org/tutorials?tut=install_ubuntu&cat=install) to install *Gazebo* on your
   machine.
-- Check the version of ROS to ensure successful installation by running the following command on your terminal window:
+- Ensure successful installation by running *Gazebo* via your terminal window:
 ```shell script
 gazebo
 ```
@@ -53,23 +51,24 @@ catkin_make
 ```shell script
 roscore
 ```
-- Open a new terminal, switch to the ROS workspace, and run both the obstacle avoidance node using the *roslaunch*:
+- Open a new terminal, switch to the ROS workspace, and launch the obstacle avoidance node:
 ```shell script
 cd <ROS Workspace>
 source devel/setup.bash
-roslaunch turtlebot_obstacle_avoidance obstacle_avoidance.launch  enableRosBag:=false
+roslaunch turtlebot_obstacle_avoidance obstacle_avoidance.launch enableRosBag:=false
 ```
-- A turtlebot world will be open up on the Gazebo Simulator and you will be able to see the robot avoiding various
+- A turtlebot world will open up on the Gazebo Simulator and you will be able to see the robot avoiding various
   obstacles in its path.
+- Change your camera view to have better look at the movement of the robot.
 - Stop execution using *Ctrl+C*.
 
 ## Generate/View Rosbag File
 
 - You can either generate a new ROS bag file or play the rosbag file included in the *results* directory.
-- To generate a new bag file, launch the ROS node. (You can skip this step if you just want to play the previously
-generated bag file)
+- To generate a new bag file, launch the obstacle avoidance node. (You can skip this step if you just want to play the
+  previously generated bag file)
 ```shell script
-roslaunch turtlebot_obstacle_avoidance obstacle_avoidance.launch  enableRosBag:=true
+roslaunch turtlebot_obstacle_avoidance obstacle_avoidance.launch enableRosBag:=true
 ```
 - The bag file would have been replaced with new data.
 - To play the ROS bag file, make sure nothing is running except *roscore*, open a new terminal window, and run :
@@ -85,11 +84,11 @@ source devel/setup.bash
 cd src/obstacle_avoidance_simulation/results
 rosbag play record_obstacle_avoidance.bag
 ```
-- You should be able to see the obstacle avoidance behavior on turtlebot in the Gazebo window for 20 seconds.
+- You should be able to see the obstacle avoidance behavior on turtlebot in the Gazebo window.
 - You can also verify the bag file by running: (Stop the execution of last command before proceeding any further by
 using *Ctrl+C*)
 ```shell script
-rosbag info recordTalker.bag
+rosbag info record_obstacle_avoidance.bag
 ``` 
 
 ## Documents
