@@ -73,8 +73,10 @@ roslaunch turtlebot_obstacle_avoidance obstacle_avoidance.launch enableRosBag:=t
 - The bag file would have been replaced with new data.
 - To play the ROS bag file, make sure nothing is running except *roscore*, open a new terminal window, and run :
 ```shell script
-source /opt/ros/kinetic/setup.bash
-roslaunch turtlebot_gazebo turtlebot_world.launch
+cd <ROS Workspace>
+source devel/setup.bash
+cd src/obstacle_avoidance_simulation/worlds
+rosrun gazebo_ros gazebo turtlebot_enclosed_world.world
 ```
 - The above commands will help you launch the turtlebot world in Gazebo.
 - Open a new terminal, switch to ROS workspace, and run:
@@ -91,17 +93,6 @@ using *Ctrl+C*)
 rosbag info record_obstacle_avoidance.bag
 ``` 
 
-## View Turlebot World
-
-- If you just want to look at the customized turtlebot world in Gazebo, make sure your roscore is running, and all other
-ROS nodes have been terminated.
-- Open a new terminal, switch to your ROS workspace, and run:
-```shell script
-cd <ROS Workspace>
-source devel/setup.bash
-rosrun gazebo_ros gazebo src/obstacle_avoidance_simulationturtlebot_enclosed_world.world
-```
-    
 ## Documents
 
 - These are located in the *results* sub-directory:
