@@ -31,7 +31,7 @@ before_install:
   # Install ROS-Base: (Bare Bones) ROS package, build, and communication libraries. No GUI tools. 
   - sudo apt-get install -y --allow-unauthenticated ros-$ROS_DISTRO-ros-base
   # Install package dependencies
-  -sudo apt-get install -y --allow-unauthenticated ros-$ROS_DISTRO-move_base_msgs ros-$ROS_DISTRO-geometry_msgs ros-$ROS_DISTRO-sensor_msgs
+  - sudo apt-get install -y --allow-unauthenticated ros-$ROS_DISTRO-move_base_msgs ros-$ROS_DISTRO-geometry_msgs ros-$ROS_DISTRO-sensor_msgs
   # Source appropriate bash file
   - source /opt/ros/$ROS_DISTRO/setup.bash
   # Prepare rosdep to install dependencies.
