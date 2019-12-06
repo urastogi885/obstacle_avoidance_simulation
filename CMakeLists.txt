@@ -22,5 +22,5 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(turtlebot_obstacle_avoidance src/obstacle_avoidance.cpp src/main.cpp)
-target_link_libraries(turtlebot_obstacle_avoidance ${catkin_LIBRARIES})
+add_executable(obstacle_avoidance src/obstacle_avoidance.cpp src/main.cpp)
+target_link_libraries(obstacle_avoidance ${catkin_LIBRARIES})
