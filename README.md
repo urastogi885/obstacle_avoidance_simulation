@@ -4,7 +4,7 @@
 
 ## Overview
 
-ROS package to simulate obstacle avoidance behavior on a turtlebot
+ROS package to simulate obstacle avoidance behavior on a turtlebot using laser sensor
 
 ## Dependencies
 
