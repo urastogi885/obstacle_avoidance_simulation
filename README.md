@@ -4,7 +4,12 @@
 
 ## Overview
 
-ROS package to simulate obstacle avoidance behavior on a turtlebot using laser sensor
+ROS package to simulate obstacle avoidance behavior on a turtlebot using laser sensor. A custom world created to test the robot's behavior.
+
+<p align="center">
+  <img src="https://github.com/urastogi885/obstacle_avoidance_simulation/blob/master/results/customized_turtlebot_world.png">
+  <br><b>Figure 1 - Custom world created test the robot's behavior</b><br>
+</p>
 
 ## Dependencies
 
